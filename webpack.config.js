@@ -153,10 +153,12 @@ module.exports = {
         new WebpackPwaManifest({
             name: 'Restaurant Reviews Progressive Web App',
             short_name: 'MWSApp',
+            orientation: "portrait",
+            display: "standalone",
+            start_url: ".",
             description: 'Restaurant Reviews Progressive Web App',
             background_color: '#2774a3',
             theme_color: '#2774a3',
-            start_url: 'https://mws-stage-two.netlify.com/',
             icons: [
                 {
                     src: __dirname + '/img/icon-large.png',
