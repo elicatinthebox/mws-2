@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Restaurant Reviews</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+</head>
+
+<body>
+  <a class="hidden__link" href="#neighborhoods-select">Skip to main</a>
+  <header>
+    <nav>
+      <h1><a href="/">Restaurant Reviews</a></h1>
+    </nav>
+
+  </header>
+
+  <main id="maincontent" role="main">
+      <section id="map-container" style="display: none">
+          <div id="map" role="application" ></div>
+        </section>
+    <section>
+      <div class="filter-options">
+        <h2 class="flex justify__center">Filter Results</h2>
+        <div class="flex justify__center wrap">
+          <div class="flex__column__nowrap row__spacing__small">
+            <label for="neighborhoods-select">Neighbordhood</label>
+            <select id="neighborhoods-select" name="neighborhoods" tabindex="0" role="group">
+              <option value="all">All Neighborhoods</option>
+            </select>
+          </div>
+          <div class="flex__column__nowrap">
+            <label for="cuisines-select">Cuisine</label>
+            <select id="cuisines-select" name="cuisines" role="group">
+              <option value="all">All Cuisines</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <ul id="restaurants-list" class="flex__row__wrap justify__center"></ul>
+    </section>
+  </main>
+
+  <footer id="footer">
+    Copyright (c) 2017 <a href="/" tabindex="1"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+</body>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=<%=htmlWebpackPlugin.options.WEBPACK_GDRIVE_API_KEY%>&libraries=places&callback=initMap"></script>
+
+</html>
